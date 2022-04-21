@@ -170,8 +170,33 @@
   println(f(1,3))
   ```
   - Lambda function example:
-  ````kotlin
+  ```kotlin
   var f = {a:Int,b:Int -> a+b}
   
   println(f(1,3))
   ```
+
+## Nullables
+   
+   - Types which also accept null values
+   - Add `?` at the end of type to make nullable type
+   - Example:
+   ```kotlin
+   var nullableName:String?
+   nullableName = null
+   
+   // if nullableName is not null store its length in null, else store null in len
+   var len = nullableName?.length
+   
+   // execute the code only if value is not null
+   nullableName?.Let {println(it.length)}
+   
+   // ?: Elvis Operator
+   // if nullableName is not null store it in name, else store some default value
+   val name = nullableName ?: "John Doe"
+   
+   // !! Not null assertion operator
+   // it converts a nullable type to not nullable type and throws null exception if used on null
+   val name2 = nullableName!!
+   
+   ```
