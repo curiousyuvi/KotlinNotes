@@ -72,7 +72,7 @@
 
 ## When statement
   - Similar to switch statement
-  Example 1:
+  - Example 1:
   ```kotlin
   var n = 1
   when(n){
@@ -97,7 +97,7 @@
   }
   ```
   
-  Example 2:
+  - Example 2:
   ```kotlin
   var x: Any = 1.0
   when(n){
