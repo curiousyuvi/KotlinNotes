@@ -3,13 +3,22 @@
 ## Variables
    
    -`var` is used to decalare mutable variables
-    Example: `var myName = "Hello"`
+    Example: 
+    ```kotlin
+    var myName = "Hello"
+    ```
     
    - `val` is used to declare immutable variables
-   Example: `val x = 12`
+   Example: 
+   ```kotlin
+   val x = 12
+   ```
    
    - when using `var` it implicitly defines the type of variable by the value you pass, but we can also explicitly define types.
-   - like so : `var name : String = "Hello" `
+   - like so : 
+   ```kotlin
+   var name : String = "Hello" 
+   ```
    - also when explicitly defining type we don't need to do initialization during declaration
    Example : 
    ```kotlin
