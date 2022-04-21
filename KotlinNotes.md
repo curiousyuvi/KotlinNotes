@@ -136,3 +136,11 @@
   }
   ```
   Output :  10 9 8 7 6 5 4 3 2 1
+  
+  - Example 4 :
+  ```kotlin
+  for(num in 1 until 10 step 2){
+   print("$num ")
+  }
+  ```
+  Output :  1 3 5 7 9
