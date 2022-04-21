@@ -59,6 +59,7 @@
    var str:String = "abc"
    var n = str.length
    ```
+   - Any
 
 ## String interpolation
 
@@ -71,16 +72,40 @@
 
 ## When statement
   - Similar to switch statement
-  Example :
+  Example 1:
   ```kotlin
   var n = 1
   when(n){
+  
    1 -> println("One")
+   
    2 -> println("One")
+   
    3 -> {
       println("Three")
       println("Three")
      }
+     
+   in 4..6 -> println("four to six")
+   
+   7, 9 -> println("seven or nine")
+   
+   !in 10..12 -> println("not ten to twelve")
+   
    else -> println("none")
+   
   }
   ```
+  
+  Example 2:
+  ```kotlin
+  var x: Any = 1.0
+  when(n){
+   
+   is Int -> println("is Int")
+   
+   is Double -> println("is Double")
+   
+   else -> println("none")
+   
+  }
