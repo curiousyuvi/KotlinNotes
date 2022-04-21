@@ -148,4 +148,30 @@
 
 ## Function
 
-  - 
+  - Example 1:
+  ```kotlin
+  fun greet(name: String): A{
+   println("Hello $name")
+  }
+  ```
+  - Example 2:
+  ```kotlin
+  fun add(a:Int,b:Int): Int{
+   return a+b
+  }
+  ```
+  
+  - Anonymous function example:
+  ```kotlin
+  var f = fun(a:Int,b:Int): Int{
+   return a+b
+  }
+  
+  println(f(1,3))
+  ```
+  - Lambda function example:
+  ````kotlin
+  var f = {a:Int,b:Int -> a+b}
+  
+  println(f(1,3))
+  ```
