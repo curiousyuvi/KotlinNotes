@@ -68,3 +68,19 @@
   println("hello $str")
   println("n = ${str.length}")
   ```
+
+## When statement
+  - Similar to switch statement
+  Example :
+  ```kotlin
+  var n = 1
+  when(n){
+   1 -> println("One")
+   2 -> println("One")
+   3 -> {
+      println("Three")
+      println("Three")
+     }
+   else -> println("none")
+  }
+  ```
