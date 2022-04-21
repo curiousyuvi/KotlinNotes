@@ -1,5 +1,7 @@
 # KotlinNotes
 
+- `print()` function is used to print without newLine while `println()` function is used to print with newLine
+
 ## Variables
    
    - `var` is used to decalare mutable variables
@@ -42,4 +44,27 @@
    val f:Float = 32.12F
    ```
     
-    
+   - Boolean
+   ```kotlin
+   var flag:Boolean = true
+   ```
+   
+   - Char
+   ```kotlin
+   var c:Char = 'a'
+   ```
+   
+   - String
+   ```kotlin
+   var str:String = "abc"
+   var n = str.length
+   ```
+
+## String interpolation
+
+  Example :
+  ```kotlin
+  val str = "guys"
+  println("hello $str")
+  println("n = ${str.length}")
+  ```
