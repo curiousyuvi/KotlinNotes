@@ -2,11 +2,11 @@
 
 ## Variables
    
-   -`var` is used to decalare mutable variables
-    Example: 
-    ```kotlin
-    var myName = "Hello"
-    ```
+   - `var` is used to decalare mutable variables
+   Example: 
+   ```kotlin
+   var myName = "Hello"
+   ```
     
    - `val` is used to declare immutable variables
    Example: 
