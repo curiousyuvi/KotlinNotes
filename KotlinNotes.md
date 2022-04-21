@@ -109,3 +109,30 @@
    else -> println("none")
    
   }
+  ```
+
+## For loop
+
+  - Example 1 :
+  ```kotlin
+  for(num in 1..10){
+   print("$num ")
+  }
+  ```
+  Output :  1 2 3 4 5 6 7 8 9 10
+  
+  - Example 2 :
+  ```kotlin
+  for(num in 1 until 10){
+   print("$num ")
+  }
+  ```
+  Output :  1 2 3 4 5 6 7 8 9
+  
+  - Example 3 :
+  ```kotlin
+  for(num in 10 downTo 1){
+   print("$num ")
+  }
+  ```
+  Output :  10 9 8 7 6 5 4 3 2 1
