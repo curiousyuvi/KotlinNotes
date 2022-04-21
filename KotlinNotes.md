@@ -150,7 +150,7 @@
 
   - Example 1:
   ```kotlin
-  fun greet(name: String): A{
+  fun greet(name: String){
    println("Hello $name")
   }
   ```
