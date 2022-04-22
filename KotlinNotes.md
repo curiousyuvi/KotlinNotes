@@ -431,3 +431,5 @@
       
    }
    ```
+   
+   - In kotlin `Any` class is the root of class as every class extends from it,
