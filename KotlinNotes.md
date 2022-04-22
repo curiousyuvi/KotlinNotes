@@ -383,3 +383,51 @@
    
    data class User(val id: Long, var name : String)
    ```
+   - Inheritance
+
+   - Example 1:
+   ```kotlin
+   open class Parent{
+      // properties
+      // methods
+   }
+   
+   class Child : Parent(){
+      // properties
+      // methods
+   }
+   ```
+   
+   - Example 2:
+   ```kotlin
+   open class Parent(someValue : String){
+      // properties
+      // methods
+   }
+   
+   class Child(someValue : String, someOtherValue : String) : Parent(someValue : String){
+      // properties
+      // methods
+   }
+   ```
+   
+   - Example 3:
+   ```kotlin
+   open class Parent(someValue : String){
+      fun someFunction(){
+         // code
+      }
+      
+      open fun someOtherFunction(){
+         // code
+      }
+   }
+   
+   class Child(someValue : String, someOtherValue : String) : Parent(someValue : String){
+         override fun someOtherFunction(){
+            //code
+            super.drive()
+         }
+      
+   }
+   ```
