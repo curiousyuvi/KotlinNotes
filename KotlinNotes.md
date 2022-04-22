@@ -253,7 +253,7 @@
    }
    ```
    
-   - Example 3:
+   - Example 4:
    ```kotlin
    fun main(){
       var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
@@ -268,6 +268,7 @@
       // secondary member constructor
       constructor(firstName : String, lastName : String, age : Int) : this(firstName,lastName){
          this.age = age
+         println("Initalized a new person with firstName = $firstName, lastName = $lastName and age = $age")
       }
       
       init {
@@ -283,7 +284,7 @@
    
    - We can't acces parameters from Primary constructor in member functions, so we have to create member varible to store them
 
-   - Example 4:
+   - Example 5:
    ```kotlin
    fun main(){
       var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
@@ -299,6 +300,7 @@
       // secondary member constructor
       constructor(firstName : String, lastName : String, age : Int) : this(firstName,lastName){
          this.age = age
+         println("Initalized a new person with firstName = $firstName, lastName = $lastName and age = $age")
       }
       
       init {
@@ -309,6 +311,51 @@
       // member fuction
       fun stateAge(){
          println("$firstName \'s age is $age)
+      }
+   }
+   ```
+   
+   - By default kotlin has getter and setter like this :
+   ```kotlin
+   get() = field
+   set(value){
+      field = value
+   }
+   ```
+   
+   - We can also write custom getter and setter
+   ``kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
+      println("${jacob.firstName} \'s age is ${jacob.age}")
+      jacob.age = 12;
+      println("${jacob.firstName} \'s age is ${jacob.age}")
+      
+   }
+   
+   class Person(firstName: String = "John", lastName: String = "Doe"){
+      
+      // member variables
+      var age : Int? = null
+         // custom getter and setter
+         get() {
+            return field + 4
+         }
+         
+         set(value) {
+            field = if(value>8) value else 10
+         }
+      var firstName : String? = null
+      
+      // secondary member constructor
+      constructor(firstName : String, lastName : String, age : Int) : this(firstName,lastName){
+         this.age = age
+         println("Initalized a new person with firstName = $firstName, lastName = $lastName and age = $age")
+      }
+      
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+         this.firstName= firstName
       }
    }
    ```
