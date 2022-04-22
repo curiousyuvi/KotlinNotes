@@ -471,3 +471,34 @@
       }
    }
    ```
+
+## Typecasting
+
+   - `as` and `as?` to do explicit type casting
+
+
+## Collection
+
+   - In kotlin there are 2 types of collections
+      - **1** collections that can hold one type of data
+      - **2** and the collections that can hold multiple type of data
+
+   - **1** Collection of only the same element
+      - `IntArray`
+      - `BooleanArray`
+      - `DoubleArray`
+      - `ByteArray`
+      - `LongArray`
+      - `ShortArray`
+      - `FloatArray`
+      - `arrayOf<String>`
+      - `arrayOf<SomeClass>`
+   
+   - **Immutable Collections**
+      - `List` - `listOf`
+      - `Set` - `setOf`
+      - `Map` - `mapOf`
+   - **Mutable Collections**
+      - Mutable List - ArrayList, arrayListOf, mutableListOf
+      - Mutable Set - mutableSetOf , hashSetOf
+      - Mutable Mao - HashMap, hashMapOf, mutableMapOf
