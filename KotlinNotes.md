@@ -502,3 +502,27 @@
       - Mutable List - ArrayList, arrayListOf, mutableListOf
       - Mutable Set - mutableSetOf , hashSetOf
       - Mutable Mao - HashMap, hashMapOf, mutableMapOf
+   
+   - Example 1:
+   ```kotlin
+   var numbers = arrayOf(1,3,4,5,2)
+   numbers[0] = 2
+   
+   for(number in numbers){
+      println(number)
+   }
+   
+   ```
+   
+   - Example 2:
+   ```kotlin
+   var numbers = listOf(1,3,4,5,2)
+   
+   for(number in numbers){
+      println(number)
+   }
+   
+   var mutableNumbers = numbers.toMutableList()
+   mutableNumbers[3] = 2
+   
+   ```
