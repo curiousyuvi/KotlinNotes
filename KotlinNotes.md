@@ -204,17 +204,111 @@
 ## Classes
    - Example 1:
    ```kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer")
+   }
+   
    class Person(firstName: String, lastName: String){
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+      }  
+   }
+   ```
+   - Example 2:
+   ```kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer")
+      var john = Person()
+   }
+   
+   class Person(firstName: String = "John", lastName: String = "Doe"){
       init {
          println("Initalized a new person with firstName = $firstName and lastName = $lastName")
       }
    }
    ```
-   - Example 2:
+   
+   - Example 3:
    ```kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer")
+      jacob.stateHobby()
+      jacob.hobby = "stealing"
+      jacob.stateHobby()
+   }
+   
    class Person(firstName: String = "John", lastName: String = "Doe"){
+      
+      // member variables
+      var hobby:String = "playing soccer"
+      
       init {
          println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+      }
+      
+      // member fuction
+      fun stateHobby(){
+         println("My hobby is to $hobby)
+      }
+   }
+   ```
+   
+   - Example 3:
+   ```kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
+      jacob.stateAge()
+   }
+   
+   class Person(firstName: String = "John", lastName: String = "Doe"){
+      
+      // member variables
+      var age : Int? = null
+      
+      // secondary member constructor
+      constructor(firstName : String, lastName : String, age : Int) : this(firstName,lastName){
+         this.age = age
+      }
+      
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+      }
+      
+      // member fuction
+      fun stateAge(){
+         println("My age is $age)
+      }
+   }
+   ```
+   
+   - We can't acces parameters from Primary constructor in member functions, so we have to create member varible to store them
+
+   - Example 4:
+   ```kotlin
+   fun main(){
+      var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
+      jacob.stateAge()
+   }
+   
+   class Person(firstName: String = "John", lastName: String = "Doe"){
+      
+      // member variables
+      var age : Int? = null
+      var firstName : String? = null
+      
+      // secondary member constructor
+      constructor(firstName : String, lastName : String, age : Int) : this(firstName,lastName){
+         this.age = age
+      }
+      
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+         this.firstName= firstName
+      }
+      
+      // member fuction
+      fun stateAge(){
+         println("$firstName \'s age is $age)
       }
    }
    ```
