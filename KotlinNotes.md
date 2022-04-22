@@ -450,3 +450,24 @@
       }
    }
    ```
+   
+   - **Abstract Class**:
+   - An Abstract class is similar to an interface
+   - The member of an abstract class are non-abstract by default, unless you explicilty make them abstract
+   - Example :
+   ```kotlin
+   abstract class Parent{
+      abstract var someValue : Int
+      fun someFunction(){
+         // code
+      }
+      abstract fun someOtherFunction:Int
+      
+   }
+   
+   class Child(override var someValue) : Parent{
+      override fun someOtherFunction(){
+         //code
+      }
+   }
+   ```
