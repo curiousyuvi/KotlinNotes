@@ -339,11 +339,11 @@
       var age : Int? = null
          // custom getter and setter
          get() {
-            return field + 4
+            return field?.plus(4)
          }
          
          set(value) {
-            field = if(value>8) value else 10
+            field = value ?: 10
          }
       var firstName : String? = null
       
