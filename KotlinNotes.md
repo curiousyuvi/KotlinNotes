@@ -324,7 +324,7 @@
    ```
    
    - We can also write custom getter and setter
-   ``kotlin
+   ```kotlin
    fun main(){
       var jacob = Person(firstName = "Jacob", lastName = "Maer", age = 19)
       println("${jacob.firstName} \'s age is ${jacob.age}")
@@ -358,4 +358,28 @@
          this.firstName= firstName
       }
    }
+   ```
+   
+   - `private get` is used to make getter private
+   - `private set` is used to make setter private
+
+   - Data Class
+   - Example :
+   ```kotlin
+   fun main(){
+      val user1 = User(122,"John")
+      println(user1)
+      val user2 : User = user1.copy(name = "Michael")
+      
+      println(user2.component1())
+      println(user2.component2())
+      
+      var (id,name) = user1
+      println(id)
+      println(name)
+      
+      
+   }
+   
+   data class User(val id: Long, var name : String)
    ```
