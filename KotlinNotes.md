@@ -200,3 +200,21 @@
    val name2 = nullableName!!
    
    ```
+   
+## Classes
+   - Example 1:
+   ```kotlin
+   class Person(firstName: String, lastName: String){
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+      }
+   }
+   ```
+   - Example 2:
+   ```kotlin
+   class Person(firstName: String = "John", lastName: String = "Doe"){
+      init {
+         println("Initalized a new person with firstName = $firstName and lastName = $lastName")
+      }
+   }
+   ```
