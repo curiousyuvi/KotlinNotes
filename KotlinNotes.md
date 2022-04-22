@@ -433,3 +433,20 @@
    ```
    
    - In kotlin `Any` class is the root of class as every class extends from it,
+   
+   - **Interface**:
+   - An interface may or may not provide complete implimentation of a variable or function
+   - interface is overriden in derived classes
+   - Example :
+   ```kotlin
+   interface Parent{
+      var someValue : Int
+      fun someFunction : String
+   }
+   
+   class Child(override var someValue) : Parent{
+      override fun someFunction(){
+         //code
+      }
+   }
+   ```
